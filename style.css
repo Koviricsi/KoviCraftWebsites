@@ -87,7 +87,7 @@ a{
 #icon{
     position: fixed;
     left: 95vw;
-    width: 3vw;
+    width: 50px;
     transform: rotateY(180deg);
     pointer-events: all;
     cursor: pointer;
@@ -244,7 +244,6 @@ header{
 }
 .napi p{
     color: var(--fekete);
-    width: 50vw;
     font-size: 2vw;
     margin-left: auto;
 }
@@ -607,6 +606,9 @@ header{
         .menu h1{
             font-size: 90px;
         }
+    #icon{
+        width: 80px;
+    }
 }
 @media screen and (width >= 2000px) {
     header{
@@ -637,6 +639,9 @@ header{
         .menu h1{
             font-size: 120px;
         }
+    #icon{
+        width: 80px;
+    }
 }
 
 /* Navbar reszponzivítás */
