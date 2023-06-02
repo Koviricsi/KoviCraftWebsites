@@ -86,7 +86,7 @@ a{
 
 #icon{
     position: fixed;
-    left: 95vw;
+    left: 90%;
     width: 50px;
     transform: rotateY(180deg);
     pointer-events: all;
