@@ -146,7 +146,7 @@ header{
     height: auto;
     border-radius: 2vh;
     text-shadow: 0.5vh 0 1vh var(--fekete);
-    font-size: 4vw;
+    font-size: 50px;
     font-weight: bolder;
     pointer-events: none;
 }
@@ -191,7 +191,9 @@ header{
 
 
 .tortenet{
-    height: 50vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: fit-content;
     margin: 0;
     padding: 2vw;
     border-top: 0.5vw var(--feher3) solid;
@@ -200,18 +202,20 @@ header{
     color: var(--fekete);
     margin: 10vw 0 0 0;
     padding: 0;
+    grid-column: span 2;
     font-size: 5vw;
     letter-spacing: 0.5vw;
 }
 .tortenet p{
     color: var(--fekete);
-    width: 50vw;
+    width: fit-content;
     font-size: 2vw;
 }
 .tortenet img{
-    float: right;
     width: 40vw;
     margin: 5vw;
+    aspect-ratio: 1/1;
+    object-fit: cover;
     border: 0.2vw solid var(--fekete);
     box-shadow: 0.8vw 0.8vw 2vw var(--fekete);
 }
@@ -220,11 +224,15 @@ header{
 
 
 .napi{
-    height: 50vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
     margin: 0;
     margin-top: 15vw;
     padding: 2vw;
-    text-align: right;
+    text-align: center;
 }
 .napi h1{
     color: var(--fekete);
@@ -255,22 +263,24 @@ header{
     letter-spacing: 0.2vw;
 }
 .napi img{
+    width: 40vw;
+    aspect-ratio: 1/1;
+    object-fit: cover;
     float: left;
-    width: 20vw;
-    position: relative;
-    bottom: 10vw;
-    margin: 5vw;
     border: 0.2vw solid var(--fekete);
     box-shadow: 0.8vw 0.8vw 2vw var(--fekete);
+}
+.napi a{
+    grid-row: span 2;
 }
 
 /* Itallap blokk */
 
 
 .menu{
-    display: flex;
-    flex-wrap: wrap;
-    height: 50vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: max-content;
     margin: 0;
     margin-top: 8vw;
     padding: 2vw;
@@ -280,12 +290,12 @@ header{
     color: var(--fekete);
     margin: 0;
     padding: 0;
+    width: min-content;
     font-size: 5vw;
     letter-spacing: 0.5vw;
-    width: 100%;
+    grid-column: span 2;
 }
 .menu p{
-    width: 50%;
     color: var(--fekete);
     font-size: 2vw;
 }
@@ -308,7 +318,7 @@ header{
 
 
 .galeria{
-    margin-left: auto;
+    margin: auto;
     max-width: 40vw;
 }
 .galeria2{
@@ -334,7 +344,15 @@ header{
     width: 2.5vw;
     height: 2.5vw;
     border-radius: 100%;
+    background-color: var(--fekete);
+    border-color: var(--feher);
+    transition: all 0.1s;
 }
+.galeriagomb input:hover{
+    background-color: var(--feher);
+    border-color: var(--fekete);
+}
+
 /* Footer */
 
 
@@ -348,18 +366,281 @@ header{
 
 
 /* Reszponzív rész */
-
-
-@media screen and (max-width: 1025px){
-    .headbg{
-        display: flexbox;
-        width: 100%;
+@media screen and (375px > width) {
+    header{
+        font-size: 15px;
+    }
+    .tortenet{
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 100%;
+    }
+        .tortenet p{
+            font-size: 15px;
+        }
+        .tortenet h1{
+            font-size: 40px;
+            grid-column: auto;
+        }
+    .napi{
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 100%;
+    }
+        .napi p{
+            font-size: 15px;
+            margin: 0 auto;
+        }
+        .napi h1{
+            font-size: 40px;
+        }
+        .napi a{
+            margin: 5vw auto;
+        }
+    .menu{
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 100%;
+    }
+        .menu p{
+            font-size: 15px;
+        }
+        .menu h1{
+            font-size: 40px;
+            grid-column: auto;
+            justify-self: center;
+        }
+        
+}
+@media screen and (500px > width >= 375px) {
+    header{
+        font-size: 20px;
+    }
+    .tortenet{
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 100%;
+    }
+        .tortenet p{
+            font-size: 20px;
+        }
+        .tortenet h1{
+            font-size: 40px;
+            grid-column: auto;
+        }
+    .napi{
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 100%;
+    }
+        .napi p{
+            font-size: 20px;
+            margin: 0 auto;
+        }
+        .napi h1{
+            font-size: 40px;
+        }
+        .napi a{
+            margin: 5vw auto;
+        }
+    .menu{
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 100%;
+    }
+        .menu p{
+            font-size: 20px;
+        }
+        .menu h1{
+            font-size: 40px;
+            grid-column: auto;
+            justify-self: center;
+        }
+}
+@media screen and (768px > width >= 500px) {
+    header{
+        font-size: 25px;
+    }
+    .tortenet{
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 100%;
+    }
+        .tortenet p{
+            font-size: 25px;
+        }
+        .tortenet h1{
+            font-size: 50px;
+            grid-column: auto;
+        }
+    .napi{
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 100%;
+    }
+        .napi p{
+            font-size: 25px;
+            margin: 0 auto;
+        }
+        .napi h1{
+            font-size: 50px;
+        }
+        .napi a{
+            margin: 5vw auto;
+        }
+    .menu{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        grid-template-columns: 100%;
+    }
+        .menu p{
+            font-size: 25px;
+        }
+        .menu h1{
+            font-size: 50px;
+            grid-column: auto;
+            justify-self: center;
+        }
+}
+@media screen and (1024px > width >= 768px) {
+    header{
+        font-size: 40px;
+    }
+    .tortenet{
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 100%;
+    }
+        .tortenet p{
+            font-size: 30px;
+        }
+        .tortenet h1{
+            font-size: 60px;
+            grid-column: auto;
+        }
+    .napi{
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 100%;
+    }
+        .napi p{
+            font-size: 30px;
+            margin: 0 auto;
+        }
+        .napi h1{
+            font-size: 60px;
+        }
+        .napi a{
+            margin: 5vw auto;
+        }
+    .menu{
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 100%;
+    }
+        .menu p{
+            font-size: 30px;
+        }
+        .menu h1{
+            font-size: 60px;
+            grid-column: auto;
+            justify-self: center;
+        }
+}
+@media screen and (1350px > width >= 1024px) {
+    header{
+        font-size: 50px;
+    }
+        .tortenet p{
+            font-size: 30px;
+        }
+        .tortenet h1{
+            font-size: 70px;
+        }
+        .napi p{
+            font-size: 30px;
+            margin: 0 auto;
+        }
+        .napi h1{
+            font-size: 70px;
+        }
+        .napi a{
+            margin: 5vw auto;
+        }
+    .menu{
         align-items: center;
     }
-    header{
-        font-size: 5vw;
-    }
+        .menu p{
+            font-size: 30px;
+        }
+        .menu h1{
+            font-size: 70px;
+        }
 }
+@media screen and (2000px > width >= 1350px) {
+    header{
+        font-size: 70px;
+    }
+        .tortenet p{
+            font-size: 35px;
+        }
+        .tortenet h1{
+            font-size: 90px;
+        }
+        .napi p{
+            font-size: 35px;
+            margin: 0 auto;
+        }
+        .napi h1{
+            font-size: 90px;
+        }
+        .napi a{
+            margin: 5vw auto;
+        }
+    .menu{
+        align-items: center;
+    }
+        .menu p{
+            font-size: 35px;
+        }
+        .menu h1{
+            font-size: 90px;
+        }
+}
+@media screen and (width >= 2000px) {
+    header{
+        font-size: 100px;
+    }
+        .tortenet p{
+            font-size: 50px;
+        }
+        .tortenet h1{
+            font-size: 120px;
+        }
+        .napi p{
+            font-size: 50px;
+            margin: 0 auto;
+        }
+        .napi h1{
+            font-size: 120px;
+        }
+        .napi a{
+            margin: 5vw auto;
+        }
+    .menu{
+        align-items: center;
+    }
+        .menu p{
+            font-size: 50px;
+        }
+        .menu h1{
+            font-size: 120px;
+        }
+}
+
+/* Navbar reszponzivítás */
+
 @media screen and (max-width: 700px) {
     .nav-item{
         display: none;
