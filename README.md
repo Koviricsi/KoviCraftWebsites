@@ -1,1 +1,1 @@
-# KoviCraftWebsites
+*https://koviricsi.github.io/KoviCraftWebsites/*
