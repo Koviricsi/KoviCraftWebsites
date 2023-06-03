@@ -8,9 +8,6 @@ body{
     padding: 0;
     background-color: var(--feher);
 }
-img{
-    image-rendering: optimizeQuality;
-}
 
 /* Áttűnés egész oldalra */
 
@@ -136,14 +133,17 @@ a{
     text-align: center;
     margin: 5vw 0;
     width: 100%;
+    height: 40%;
     background-color: var(--feher2);
     justify-content: center;
     align-items: center;
+    align-self: center;
 }
 header{
     color: var(--feher3);
     background-color: var(--barna2);
-    width: 40%;
+    width: fit-content;
+    padding: 1vw;
     height: auto;
     border-radius: 2vh;
     text-shadow: 0.5vh 0 1vh var(--fekete);
@@ -366,7 +366,10 @@ header{
 /* Reszponzív rész */
 @media screen and (375px > width) {
     header{
-        font-size: 15px;
+        font-size: 35px;
+    }
+    .head{
+        height: 200px;
     }
     .tortenet{
         align-items: center;
@@ -412,7 +415,10 @@ header{
 }
 @media screen and (500px > width >= 375px) {
     header{
-        font-size: 20px;
+        font-size: 40px;
+    }
+    .head{
+        height: 250px;
     }
     .tortenet{
         align-items: center;
@@ -457,7 +463,10 @@ header{
 }
 @media screen and (768px > width >= 500px) {
     header{
-        font-size: 25px;
+        font-size: 50px;
+    }
+    .head{
+        height: 250px;
     }
     .tortenet{
         align-items: center;
@@ -503,7 +512,10 @@ header{
 }
 @media screen and (1024px > width >= 768px) {
     header{
-        font-size: 40px;
+        font-size: 60px;
+    }
+    .head{
+        height: 300px;
     }
     .tortenet{
         align-items: center;
