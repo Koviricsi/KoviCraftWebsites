@@ -18,6 +18,7 @@ img{
 *{
     transition: all 0.5s;
     cursor: default;
+    box-sizing: border-box;
 }
 
 ::-webkit-scrollbar{
@@ -86,7 +87,7 @@ a{
 
 #icon{
     position: fixed;
-    left: 90%;
+    right: 0;
     width: 50px;
     transform: rotateY(180deg);
     pointer-events: all;
@@ -213,7 +214,7 @@ header{
 }
 .tortenet img{
     width: 40vw;
-    margin: 5vw;
+    margin: 3vw;
     aspect-ratio: 1/1;
     object-fit: cover;
     border: 0.2vw solid var(--fekete);
@@ -250,7 +251,6 @@ header{
 .napi p a{
     color: var(--fekete);
     text-decoration: none;
-    font-size: 3vw;
     font-weight: bold;
     background-color: var(--feher);
     border: 0.2vw solid var(--fekete);
@@ -301,7 +301,6 @@ header{
 .menu p a{
     color: var(--fekete);
     text-decoration: none;
-    font-size: 3vw;
     font-weight: bold;
     background-color: var(--feher);
     border: 0.2vw solid var(--fekete);
