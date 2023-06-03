@@ -144,12 +144,22 @@ header{
     background-color: var(--barna2);
     width: fit-content;
     padding: 1vw;
-    height: auto;
+    height: fit-content;
     border-radius: 2vh;
     text-shadow: 0.5vh 0 1vh var(--fekete);
     font-size: 50px;
     font-weight: bolder;
     pointer-events: none;
+    &::before{
+        content: "";
+        display: block;
+        padding-bottom: 3%;
+    }
+    &::after{
+        content: "";
+        display: block;
+        padding-top: 3%;
+    }
 }
 
 /* Navbar */
@@ -561,6 +571,12 @@ header{
 @media screen and (1350px > width >= 1024px) {
     header{
         font-size: 50px;
+        &::before{
+            padding-bottom: 0;
+        }
+        &::after{
+            padding-top: 0;
+        }
     }
         .tortenet p{
             font-size: 30px;
@@ -591,6 +607,12 @@ header{
 @media screen and (2000px > width >= 1350px) {
     header{
         font-size: 70px;
+        &::before{
+            padding-bottom: 0;
+        }
+        &::after{
+            padding-top: 0;
+        }
     }
         .tortenet p{
             font-size: 35px;
@@ -624,6 +646,12 @@ header{
 @media screen and (width >= 2000px) {
     header{
         font-size: 100px;
+        &::before{
+            padding-bottom: 0;
+        }
+        &::after{
+            padding-top: 0;
+        }
     }
         .tortenet p{
             font-size: 50px;
